@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RigorVolt - Soluções Elétricas e Energias Renováveis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .lightning-animation {
+            animation: lightning 2s infinite;
+        }
+        
+        @keyframes lightning {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/351XXXXXXXX" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition-all z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-red-800 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                    RV
+                </div>
+                <h1 class="text-xl font-bold text-red-800">Rigor<span class="text-yellow-500">Volt</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="font-medium hover:text-red-800 transition">Início</a>
+                <a href="#services" class="font-medium hover:text-red-800 transition">Serviços</a>
+                <a href="#about" class="font-medium hover:text-red-800 transition">Sobre Nós</a>
+                <a href="#portfolio" class="font-medium hover:text-red-800 transition">Projetos</a>
+                <a href="#contact" class="font-medium hover:text-red-800 transition">Contactos</a>
+            </nav>
+            
+            <a href="#contact" class="hidden md:block bg-red-800 hover:bg-red-900 text-white px-6 py-2 rounded-full font-medium transition">
+                Pedir Orçamento
+            </a>
+            
+            <button class="md:hidden text-gray-800" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-md" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="font-medium hover:text-red-800 transition">Início</a>
+                <a href="#services" class="font-medium hover:text-red-800 transition">Serviços</a>
+                <a href="#about" class="font-medium hover:text-red-800 transition">Sobre Nós</a>
+                <a href="#portfolio" class="font-medium hover:text-red-800 transition">Projetos</a>
+                <a href="#contact" class="font-medium hover:text-red-800 transition">Contactos</a>
+                <a href="#contact" class="bg-red-800 hover:bg-red-900 text-white px-6 py-2 rounded-full font-medium transition text-center">
+                    Pedir Orçamento
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center grayscale"></div>
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 max-w-3xl mx-auto px-4 text-center text-white fade-in">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Energia com <span class="text-yellow-400">Rigor</span> e Confiança</h1>
+      <p class="text-lg md:text-xl mb-8">Instalações elétricas, painéis solares e sistemas de segurança em Leiria e região.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#contact" class="bg-red-700 hover:bg-red-800 px-6 py-3 rounded-full font-semibold">Peça Orçamento</a>
+        <a href="#services" class="border-2 border-white hover:bg-white hover:text-gray-800 px-6 py-3 rounded-full font-semibold">Ver Serviços</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossos <span class="text-red-800">Serviços</span></h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mb-4"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Soluções completas em eletricidade, energias renováveis e segurança para sua casa ou empresa.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 rounded-lg p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-bolt text-red-800 text-2xl lightning-animation"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Instalações Elétricas</h3>
+                    <p class="text-gray-600 text-center">Projetos e instalações elétricas residenciais e industriais com máxima segurança e qualidade.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 rounded-lg p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-solar-panel text-red-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Painéis Fotovoltaicos</h3>
+                    <p class="text-gray-600 text-center">Sistemas solares completos para reduzir sua conta de energia e ajudar o meio ambiente.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 rounded-lg p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-shield-alt text-red-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Sistemas de Segurança</h3>
+                    <p class="text-gray-600 text-center">Videovigilância, alarmes e sistemas de segurança para proteger o que é importante.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-50 rounded-lg p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-network-wired text-red-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Redes Estruturadas</h3>
+                    <p class="text-gray-600 text-center">Instalação de redes de dados e telecomunicações para ambientes residenciais e corporativos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Porquê escolher a <span class="text-red-800">RigorVolt</span></h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mb-4"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Comprometidos com a excelência em cada projeto que realizamos.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Advantage 1 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-award text-red-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Certificação</h3>
+                    </div>
+                    <p class="text-gray-600">Profissionais certificados e equipamentos de qualidade garantida para sua tranquilidade.</p>
+                </div>
+                
+                <!-- Advantage 2 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-clock text-red-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Rapidez</h3>
+                    </div>
+                    <p class="text-gray-600">Tempo é dinheiro. Entregamos projetos dentro do prazo sem comprometer a qualidade.</p>
+                </div>
+                
+                <!-- Advantage 3 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-medal text-red-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Experiência</h3>
+                    </div>
+                    <p class="text-gray-600">Mais de 15 anos no mercado, com centenas de projetos concluídos com sucesso.</p>
+                </div>
+                
+                <!-- Advantage 4 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-headset text-red-800"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Suporte</h3>
+                    </div>
+                    <p class="text-gray-600">Assistência técnica disponível 24/7 para garantir o funcionamento contínuo dos seus sistemas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">O que dizem os nossos <span class="text-red-800">clientes</span></h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mb-4"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A satisfação dos nossos clientes é a nossa maior recompensa.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"A RigorVolt instalou o meu sistema fotovoltaico e o resultado foi excelente. Reduzi 80% na conta de luz e o atendimento foi impecável."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Silva</h4>
+                            <p class="text-sm text-gray-500">Residencial - Leiria</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Contratamos a RigorVolt para a instalação elétrica da nossa nova loja e ficamos impressionados com a profissionalidade e atenção aos detalhes."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos Mendes</h4>
+                            <p class="text-sm text-gray-500">Comercial - Marinha Grande</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"O sistema de segurança instalado pela RigorVolt é extremamente confiável. Já nos alertou sobre duas tentativas de intrusão e a equipe de suporte respondeu imediatamente."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sofia Almeida</h4>
+                            <p class="text-sm text-gray-500">Empresarial - Pombal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Sobre a <span class="text-red-800">RigorVolt</span></h2>
+                    <div class="w-20 h-1 bg-yellow-500 mb-6"></div>
+                    <p class="text-gray-600 mb-6">Fundada em 2008, a RigorVolt tornou-se referência em soluções elétricas e energéticas na região de Leiria, combinando tecnologia avançada com atendimento personalizado.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-4 text-red-800">Nossa Missão</h3>
+                        <p class="text-gray-600">Fornecer soluções energéticas inteligentes e sustentáveis que melhorem a qualidade de vida dos nossos clientes e contribuam para um futuro mais verde.</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-4 text-red-800">Nossos Valores</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Integridade em todas as nossas ações</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Inovação constante</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Compromisso com a satisfação do cliente</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Responsabilidade ambiental</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 relative">
+                    <div class="bg-white p-2 shadow-lg rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d306ca4e3f44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Equipe RigorVolt" class="w-full h-auto rounded-lg">
+                    </div>
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-red-800 text-white p-6 rounded-lg shadow-lg hidden lg:block">
+                        <div class="text-4xl font-bold mb-2">15+</div>
+                        <div class="text-lg">Anos de Experiência</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossos <span class="text-red-800">Projetos</span></h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mb-4"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Alguns dos nossos trabalhos recentes em Leiria e região.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="portfolio-item relative rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Projeto Residencial" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Instalação Fotovoltaica</h3>
+                            <p class="text-gray-200">Residência em Leiria - 8kWp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item relative rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Projeto Comercial" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Sistema Elétrico Completo</h3>
+                            <p class="text-gray-200">Loja Comercial - Marinha Grande</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item relative rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Projeto Industrial" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Instalação Industrial</h3>
+                            <p class="text-gray-200">Fábrica - Pombal</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="portfolio-item relative rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055227f30dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sistema de Segurança" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Videovigilância</h3>
+                            <p class="text-gray-200">Condomínio - Batalha</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="portfolio-item relative rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Redes Estruturadas" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Redes Estruturadas</h3>
+                            <p class="text-gray-200">Escritórios - Ourém</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="portfolio-item relative rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Automação Residencial" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Automação Residencial</h3>
+                            <p class="text-gray-200">Moradia - Fátima</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-red-800 hover:bg-red-900 text-white px-8 py-3 rounded-full font-medium text-lg transition">
+                    Quero um projeto como estes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Fale <span class="text-red-800">Connosco</span></h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mb-4"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Estamos prontos para responder às suas questões e fornecer soluções personalizadas.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-6 text-red-800">Envie-nos uma mensagem</h3>
+                        
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-800">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-800">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-800">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-800"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-red-800 hover:bg-red-900 text-white px-6 py-3 rounded-lg font-medium transition">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold mb-6 text-red-800">Informações de Contacto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-red-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-red-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Morada</h4>
+                                    <p class="text-gray-600">Rua da Eletricidade, 123<br>2400-000 Leiria, Portugal</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone-alt text-red-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Telefone</h4>
+                                    <p class="text-gray-600">+351 244 123 456<br>+351 912 345 678 (Urgências)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-red-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-600">geral@rigorvolt.pt<br>comercial@rigorvolt.pt</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-clock text-red-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Horário</h4>
+                                    <p class="text-gray-600">Segunda a Sexta: 8h30 - 18h30<br>Sábado: 9h00 - 13h00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4 text-red-800">Siga-nos</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-red-800 hover:text-white transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-red-800 hover:text-white transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-red-800 hover:text-white transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white rounded-lg shadow-md overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.075300010963!2d-8.806689924108612!3d39.74331597145795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd220c8b7e2a3a1b%3A0x1a3e3a9f9b0b0b0b!2sLeiria%2C%20Portugal!5e0!3m2!1sen!2spt!4v1686149999999!5m2!1sen!2spt" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-red-800 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
+                            RV
+                        </div>
+                        <h3 class="text-xl font-bold">Rigor<span class="text-yellow-500">Volt</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Soluções elétricas e energéticas para residências e empresas na região de Leiria.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Instalações Elétricas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Painéis Fotovoltaicos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sistemas de Segurança</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Redes Estruturadas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Manutenção Elétrica</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Início</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Serviços</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Projetos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contactos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscreva a nossa newsletter para receber novidades e promoções.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-red-800 hover:bg-red-900 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 RigorVolt. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidade</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Termos e Condições</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('block');
+            } else {
+                menu.classList.remove('block');
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('block');
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Add fade-in animation to elements when they come into view
+        const fadeElements = document.querySelectorAll('.service-card, .portfolio-item');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            fadeObserver.observe(element);
+        });
+    </script>
+</body>
+</html>
